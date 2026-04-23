@@ -47,7 +47,7 @@ npm run dev
 npm start
 ```
 
-The server will start on `http://localhost:5000`
+The server will start on `https://ai-mind-mentor-clg-3.onrender.com`
 
 ## API Endpoints
 

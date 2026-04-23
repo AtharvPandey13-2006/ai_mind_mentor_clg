@@ -4,7 +4,7 @@ Complete guide for testing all API endpoints with example requests and responses
 
 ## Base URL
 ```
-http://localhost:5000/api
+https://ai-mind-mentor-clg-3.onrender.com/api
 ```
 
 ## Authentication Headers
@@ -382,7 +382,7 @@ $body = @{
     lastName = "User"
 } | ConvertTo-Json
 
-Invoke-RestMethod -Uri "http://localhost:5000/api/auth/register" `
+Invoke-RestMethod -Uri "https://ai-mind-mentor-clg-3.onrender.com/api/auth/register" `
     -Method POST `
     -Body $body `
     -ContentType "application/json"
@@ -395,7 +395,7 @@ $loginBody = @{
     password = "password123"
 } | ConvertTo-Json
 
-$response = Invoke-RestMethod -Uri "http://localhost:5000/api/auth/login" `
+$response = Invoke-RestMethod -Uri "https://ai-mind-mentor-clg-3.onrender.com/api/auth/login" `
     -Method POST `
     -Body $loginBody `
     -ContentType "application/json"
@@ -409,7 +409,7 @@ $headers = @{
     "Authorization" = "Bearer $token"
 }
 
-Invoke-RestMethod -Uri "http://localhost:5000/api/mood/stats" `
+Invoke-RestMethod -Uri "https://ai-mind-mentor-clg-3.onrender.com/api/mood/stats" `
     -Method GET `
     -Headers $headers
 ```
@@ -420,21 +420,21 @@ Invoke-RestMethod -Uri "http://localhost:5000/api/mood/stats" `
 
 ### Register
 ```bash
-curl -X POST http://localhost:5000/api/auth/register \
+curl -X POST https://ai-mind-mentor-clg-3.onrender.com/api/auth/register \
   -H "Content-Type: application/json" \
   -d '{"email":"test@example.com","password":"password123","firstName":"Test","lastName":"User"}'
 ```
 
 ### Login
 ```bash
-curl -X POST http://localhost:5000/api/auth/login \
+curl -X POST https://ai-mind-mentor-clg-3.onrender.com/api/auth/login \
   -H "Content-Type: application/json" \
   -d '{"email":"test@example.com","password":"password123"}'
 ```
 
 ### Protected Endpoint
 ```bash
-curl -X GET http://localhost:5000/api/mood/stats \
+curl -X GET https://ai-mind-mentor-clg-3.onrender.com/api/mood/stats \
   -H "Authorization: Bearer YOUR_JWT_TOKEN"
 ```
 

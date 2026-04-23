@@ -74,17 +74,17 @@ npm run dev
 npm start
 ```
 
-The server will start on `http://localhost:5000`
+The server will start on `https://ai-mind-mentor-clg-3.onrender.com`
 
 ### 7. Test the API
 
 Open your browser or use curl:
 ```powershell
 # Health check
-curl http://localhost:5000/health
+curl https://ai-mind-mentor-clg-3.onrender.com/health
 
 # API info
-curl http://localhost:5000
+curl https://ai-mind-mentor-clg-3.onrender.com
 ```
 
 Expected response:
@@ -98,12 +98,12 @@ Expected response:
 ## 📝 Next Steps
 
 1. **Update Frontend API URL** (if needed):
-   - Frontend is already configured to use `http://localhost:5000/api`
+   - Frontend is already configured to use `https://ai-mind-mentor-clg-3.onrender.com/api`
    - Check `frontend/src/services/api.js` if you need to change the port
 
 2. **Test User Registration**:
    ```powershell
-   curl -X POST http://localhost:5000/api/auth/register `
+   curl -X POST https://ai-mind-mentor-clg-3.onrender.com/api/auth/register `
      -H "Content-Type: application/json" `
      -d '{"email":"test@example.com","password":"password123","firstName":"Test","lastName":"User"}'
    ```
