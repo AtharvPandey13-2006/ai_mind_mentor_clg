@@ -5,7 +5,7 @@ import mongoose from 'mongoose';
  */
 export const connectDatabase = async () => {
   try {
-    const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/ai_mind_mentor';
+    const mongoURI = process.env.MONGODB_URI ;
     
     const options = {
       // useNewUrlParser: true, // These options are no longer needed in Mongoose 6+
